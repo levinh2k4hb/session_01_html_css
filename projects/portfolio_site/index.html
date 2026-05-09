@@ -100,10 +100,133 @@
             </div>
         </section>
 
-        <section id="portfolio" class="content-section">
-            <h2>Portfolio</h2>
-            <p>Place your projects here and keep the CTA button pointing to this section.</p>
+        <section id="portfolio" class="portfolio-section" aria-labelledby="portfolio-title">
+            <div class="container">
+                <h2 id="portfolio-title">My Portfolio</h2>
+                <div class="portfolio-filters" aria-label="Portfolio categories">
+                    <button class="filter-btn active" type="button">All</button>
+                    <button class="filter-btn" type="button">Web</button>
+                    <button class="filter-btn" type="button">Mobile</button>
+                    <button class="filter-btn" type="button">Design</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <article class="portfolio-item" data-category="web">
+                        <a href="#lightbox-1" class="lightbox-link">
+                            <img src="../image/IMG_2294.JPG" alt="E-Commerce Website project preview">
+                            <div class="portfolio-overlay">
+                                <h3>E-Commerce Website</h3>
+                                <p>React + Node.js</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="portfolio-item" data-category="web">
+                        <a href="#lightbox-2" class="lightbox-link">
+                            <img src="../image/IMG_2294.JPG" alt="Admin Dashboard project preview">
+                            <div class="portfolio-overlay">
+                                <h3>Admin Dashboard</h3>
+                                <p>Vue + Firebase</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="portfolio-item" data-category="web">
+                        <a href="#lightbox-3" class="lightbox-link">
+                            <img src="../image/IMG_2294.JPG" alt="Personal Blog project preview">
+                            <div class="portfolio-overlay">
+                                <h3>Personal Blog</h3>
+                                <p>Next.js + Markdown</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="portfolio-item" data-category="mobile">
+                        <a href="#lightbox-4" class="lightbox-link">
+                            <img src="../image/IMG_2294.JPG" alt="Food Delivery App project preview">
+                            <div class="portfolio-overlay">
+                                <h3>Food Delivery App</h3>
+                                <p>Flutter + API Integration</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="portfolio-item" data-category="mobile">
+                        <a href="#lightbox-5" class="lightbox-link">
+                            <img src="../image/IMG_2294.JPG" alt="Task Tracker App project preview">
+                            <div class="portfolio-overlay">
+                                <h3>Task Tracker App</h3>
+                                <p>React Native + Redux</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="portfolio-item" data-category="design">
+                        <a href="#lightbox-6" class="lightbox-link">
+                            <img src="../image/IMG_2294.JPG" alt="Brand Identity Concept project preview">
+                            <div class="portfolio-overlay">
+                                <h3>Brand Identity Concept</h3>
+                                <p>Figma + Design System</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
         </section>
+
+        <div id="lightbox-1" class="lightbox" aria-labelledby="lightbox-1-title" aria-hidden="true">
+            <img src="../image/IMG_2294.JPG" alt="E-Commerce Website preview in fullscreen">
+            <div class="lightbox-caption">
+                <h3 id="lightbox-1-title">E-Commerce Website</h3>
+                <p>React + Node.js</p>
+            </div>
+            <a href="#portfolio" class="lightbox-close" aria-label="Close lightbox">&times;</a>
+        </div>
+
+        <div id="lightbox-2" class="lightbox" aria-labelledby="lightbox-2-title" aria-hidden="true">
+            <img src="../image/IMG_2294.JPG" alt="Admin Dashboard preview in fullscreen">
+            <div class="lightbox-caption">
+                <h3 id="lightbox-2-title">Admin Dashboard</h3>
+                <p>Vue + Firebase</p>
+            </div>
+            <a href="#portfolio" class="lightbox-close" aria-label="Close lightbox">&times;</a>
+        </div>
+
+        <div id="lightbox-3" class="lightbox" aria-labelledby="lightbox-3-title" aria-hidden="true">
+            <img src="../image/IMG_2294.JPG" alt="Personal Blog preview in fullscreen">
+            <div class="lightbox-caption">
+                <h3 id="lightbox-3-title">Personal Blog</h3>
+                <p>Next.js + Markdown</p>
+            </div>
+            <a href="#portfolio" class="lightbox-close" aria-label="Close lightbox">&times;</a>
+        </div>
+
+        <div id="lightbox-4" class="lightbox" aria-labelledby="lightbox-4-title" aria-hidden="true">
+            <img src="../image/IMG_2294.JPG" alt="Food Delivery App preview in fullscreen">
+            <div class="lightbox-caption">
+                <h3 id="lightbox-4-title">Food Delivery App</h3>
+                <p>Flutter + API Integration</p>
+            </div>
+            <a href="#portfolio" class="lightbox-close" aria-label="Close lightbox">&times;</a>
+        </div>
+
+        <div id="lightbox-5" class="lightbox" aria-labelledby="lightbox-5-title" aria-hidden="true">
+            <img src="../image/IMG_2294.JPG" alt="Task Tracker App preview in fullscreen">
+            <div class="lightbox-caption">
+                <h3 id="lightbox-5-title">Task Tracker App</h3>
+                <p>React Native + Redux</p>
+            </div>
+            <a href="#portfolio" class="lightbox-close" aria-label="Close lightbox">&times;</a>
+        </div>
+
+        <div id="lightbox-6" class="lightbox" aria-labelledby="lightbox-6-title" aria-hidden="true">
+            <img src="../image/IMG_2294.JPG" alt="Brand Identity Concept preview in fullscreen">
+            <div class="lightbox-caption">
+                <h3 id="lightbox-6-title">Brand Identity Concept</h3>
+                <p>Figma + Design System</p>
+            </div>
+            <a href="#portfolio" class="lightbox-close" aria-label="Close lightbox">&times;</a>
+        </div>
 
         <section id="contact" class="content-section">
             <h2>Contact</h2>
