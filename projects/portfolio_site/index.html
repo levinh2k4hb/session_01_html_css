@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">YourName</div>
+        <div class="logo">Lê Vinh</div>
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <label for="menu-toggle" class="hamburger" aria-label="Open menu">
             <span></span>
@@ -38,14 +38,66 @@
             <a href="#portfolio" class="cta-button">View My Work</a>
         </section>
 
-        <section id="about" class="content-section">
-            <h2>About</h2>
-            <p>Use this section as a placeholder so the navigation links work when you test the sticky header and menu behavior.</p>
+        <section id="about" class="about-section" aria-labelledby="about-title">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="../image/IMG_2294.JPG" alt="Profile photo of Lê Vinh">
+                    </div>
+                    <div class="about-content">
+                        <h2 id="about-title">About Me</h2>
+                        <p class="lead">I'm a passionate developer with 3+ years of experience building web applications.</p>
+                        <p>Specialized in frontend development with React and Vue. Also experienced in backend with Node.js and Python.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="skills" class="content-section">
-            <h2>Skills</h2>
-            <p>Add your skills content here after the header and hero are complete.</p>
+        <section id="skills" class="skills-section" aria-labelledby="skills-title">
+            <div class="container">
+                <h2 id="skills-title">My Skills</h2>
+                <div class="skills-grid">
+                    <article class="skill-item" aria-label="HTML skill level 95 percent">
+                        <div class="skill-meta">
+                            <span class="skill-name">HTML5</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-bar" role="presentation">
+                            <div class="skill-progress" style="--target-width: 95%;"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-item" aria-label="CSS skill level 90 percent">
+                        <div class="skill-meta">
+                            <span class="skill-name">CSS3</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar" role="presentation">
+                            <div class="skill-progress" style="--target-width: 90%;"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-item" aria-label="JavaScript skill level 88 percent">
+                        <div class="skill-meta">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-bar" role="presentation">
+                            <div class="skill-progress" style="--target-width: 88%;"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-item" aria-label="React skill level 84 percent">
+                        <div class="skill-meta">
+                            <span class="skill-name">React</span>
+                            <span class="skill-percent">84%</span>
+                        </div>
+                        <div class="skill-bar" role="presentation">
+                            <div class="skill-progress" style="--target-width: 84%;"></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <section id="portfolio" class="content-section">
@@ -58,5 +110,22 @@
             <p>Put your contact details or a form here if your assignment expands further.</p>
         </section>
     </main>
+
+    <script>
+        const skillProgressBars = document.querySelectorAll('.skill-progress');
+
+        const skillObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.35 });
+
+        skillProgressBars.forEach((bar) => skillObserver.observe(bar));
+    </script>
 </body>
 </html>
