@@ -1,0 +1,8 @@
+#skills h2 {
+	color: var(--color-dark);
+	margin-bottom: 1rem;
+}
+
+#skills p {
+	line-height: 1.8;
+}
